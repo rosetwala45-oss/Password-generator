@@ -26,8 +26,6 @@ h1 {
 }
 
 .button-container {
-  display: flex;
-  gap: 1rem;
   margin-bottom: 2rem;
   margin-top: 3rem;
 }
@@ -52,6 +50,8 @@ h1 {
 }
 .output-container {
   border-top: 1px solid #2f3e53;
+  display: flex;
+  gap: 1rem;
 }
 .output-element {
   display: inline-block;

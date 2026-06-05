@@ -11,8 +11,22 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 let passwordEl1 = document.getElementById("password-1");
 let passwordEl2 = document.getElementById("password-2");
 
+let length = 10;
+
+// Generate single character
 function generate() {
-  let random = Math.floor(Math.random() * characters.length);
-  console.log(random);
+  let randomIndex = Math.floor(Math.random() * characters.length);
+  let randomCharacter = characters[randomIndex];
+  return randomCharacter;
+  generatePassword();
 }
-generate();
+
+// Bring together the single characters
+function generatePassword() {
+  // length??
+  for (let i = 0; i < length + 1; i++) {}
+}
+
+function displayPassword() {
+  passwordEl1.textContent = randomCharacter;
+}

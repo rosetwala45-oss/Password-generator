@@ -29,9 +29,18 @@ button {
   color: #4adf86;
 }
 
-.button-container {
+.inputs-container {
   margin-bottom: 2rem;
   margin-top: 3rem;
+  display: flex;
+  gap: 20px;
+}
+
+.input-el {
+  padding: 5px;
+  margin-top: 5px;
+  text-align: center;
+  width: 5rem;
 }
 
 .btn-primary {

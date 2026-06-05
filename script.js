@@ -7,20 +7,16 @@
 // prettier-ignore
 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
-
-let length = 15;
-
+let length = 20;
 let generateEl = document.getElementById("generate-btn");
 let passwordEl1 = document.getElementById("password-1");
 let passwordEl2 = document.getElementById("password-2");
 
+generateEl.addEventListener("click", generatePasswords);
+
 function getRandomCharacter() {
   let randomIndex = Math.floor(Math.random() * characters.length);
   return characters[randomIndex];
-}
-
-function updatePasswords() {
-  generatePasswords();
 }
 
 function generatePasswords() {
@@ -44,5 +40,3 @@ function generatePasswords() {
   }
   passwordEl2.textContent = passwordString2;
 }
-
-generateEl.addEventListener("click", updatePasswords);

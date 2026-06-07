@@ -18,10 +18,13 @@
       <p>Never use an insecure password again.</p>
 
       <div class="inputs-container">
-        <button class="btn btn-primary" id="generate-btn">Generate passwords</button>
+        <div><button class="btn btn-primary" id="generate-btn">Generate passwords</button></div>
+
         <form>
-          <label for="input-el" style="display: block">Select length of password</label>
-          <input type="text" class="input-el" id="input-el" />
+          <div class="input-container">
+            <label for="input-el" style="display: block">Length of password:</label>
+            <input type="number" class="input-el" id="input-el" />
+          </div>
         </form>
       </div>
 

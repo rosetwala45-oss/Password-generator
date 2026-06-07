@@ -7,10 +7,12 @@
 // prettier-ignore
 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
-let length = document.forms[0];
+
 let generateEl = document.getElementById("generate-btn");
 let passwordEl1 = document.getElementById("password-1");
 let passwordEl2 = document.getElementById("password-2");
+let copyEl1 = document.getElementById("copy-btn-1");
+let copyEl2 = document.getElementById("copy-btn-2");
 
 generateEl.addEventListener("click", generatePasswords);
 
@@ -20,11 +22,12 @@ function getRandomCharacter() {
 }
 
 function generatePasswords() {
+  let length = document.getElementById("length-input").value;
   // ----------Password 1
   let characterArray1 = [];
   let passwordString1 = "";
 
-  for (let i = 0; i < length.value; i++) {
+  for (let i = 0; i < length; i++) {
     characterArray1.push(getRandomCharacter());
     passwordString1 += characterArray1[i];
   }
@@ -40,3 +43,12 @@ function generatePasswords() {
   }
   passwordEl2.textContent = passwordString2;
 }
+
+copyEl1.onclick = function () {
+  let password = passwordEl1.innerText;
+  navigator.clipboard.writeText(password);
+};
+copyEl2.onclick = function () {
+  let password = passwordEl2.innerText;
+  navigator.clipboard.writeText(password);
+};

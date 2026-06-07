@@ -13,6 +13,7 @@ let passwordEl1 = document.getElementById("password-1");
 let passwordEl2 = document.getElementById("password-2");
 let copyEl1 = document.getElementById("copy-btn-1");
 let copyEl2 = document.getElementById("copy-btn-2");
+let copyAlertEl = document.getElementById("alert-el");
 
 generateEl.addEventListener("click", generatePasswords);
 
@@ -47,8 +48,10 @@ function generatePasswords() {
 copyEl1.onclick = function () {
   let password = passwordEl1.innerText;
   navigator.clipboard.writeText(password);
+  copyAlertEl.textContent = "Password 1 copied to clipboard❕✅";
 };
 copyEl2.onclick = function () {
   let password = passwordEl2.innerText;
   navigator.clipboard.writeText(password);
+  copyAlertEl.textContent = "Password 2 copied to clipboard❕✅";
 };

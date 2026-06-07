@@ -76,8 +76,10 @@ button {
   cursor: pointer;
 }
 .outputs-container {
+  width: 80%;
   border-top: 1px solid #2f3e53;
   display: flex;
+  justify-content: left;
   gap: 1rem;
 }
 .output-container {
